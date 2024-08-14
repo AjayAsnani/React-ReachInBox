@@ -124,7 +124,7 @@ const EmailList = ({ onSelectEmail }) => {
         <div
           className={`text-white ${isDarkMode ? "text-white" : "text-black"}`}
         >
-          <p>
+          <p className={`text-sm ${isDarkMode ? "text-white" : "text-black"}`}>
             <span
               className={`rounded-3xl ${
                 isDarkMode
@@ -142,7 +142,9 @@ const EmailList = ({ onSelectEmail }) => {
             isDarkMode ? "text-white" : "text-black"
           }`}
         >
-          <p>Newest</p>
+          <p className={`text-sm ${isDarkMode ? "text-white" : "text-black"}`}>
+            Newest
+          </p>
           <img
             src={isDarkMode ? "/arrow_back_ios.png" : "/Path 7372.png"}
             alt="Arrow icon"
@@ -207,13 +209,17 @@ const EmailList = ({ onSelectEmail }) => {
                     src={isDarkMode ? "/Frame 23.png" : "/Frame 23.png"}
                     className="h-5"
                   />
-                  <p>Campaign Name</p>
+                  <p className={` ${isDarkMode ? "text-white" : "text-black"}`}>
+                    Campaign Name
+                  </p>
                 </div>
               </div>
             </li>
           ))
         ) : (
-          <li>No emails found</li>
+          <li className={`text-sm ${isDarkMode ? "text-white" : "text-black"}`}>
+            No emails found
+          </li>
         )}
       </ul>
     </div>

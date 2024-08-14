@@ -56,14 +56,31 @@ const ReplyDialog = ({ isOpen, onClose, onSendReply, onSave }) => {
             isDarkMode ? "bg-[#23272c]" : "bg-[#f0f0f0]"
           }`}
         >
-          <h3 className="text-2xl font-bold mb-4">Reply</h3>
-          <p className="font-bold text-xl cursor-pointer" onClick={onClose}>
+          <h3
+            className={`text-2xl font-bold mb-4  ${
+              isDarkMode ? "text-white" : "text-black"
+            }`}
+          >
+            Reply
+          </h3>
+          <p
+            className={`font-bold text-xl cursor-pointer1 cursor-pointer ${
+              isDarkMode ? "text-white" : "text-black"
+            }`}
+            onClick={onClose}
+          >
             X
           </p>
         </div>
         <div className="mb-4 px-6">
           <div className="flex items-center mb-2 border-b">
-            <label className="w-24 text-sm font-semibold ml-2">To:</label>
+            <label
+              className={`w-24 text-sm font-semibold ml-2  ${
+                isDarkMode ? "text-white" : "text-black"
+              }`}
+            >
+              To:
+            </label>
             <input
               type="text"
               className={`flex-1 p-2 outline-none ${
@@ -75,7 +92,13 @@ const ReplyDialog = ({ isOpen, onClose, onSendReply, onSave }) => {
             />
           </div>
           <div className="flex items-center mb-2 border-b">
-            <label className="w-24 text-sm font-semibold ml-2">From:</label>
+            <label
+              className={`w-24 text-sm font-semibold ml-2  ${
+                isDarkMode ? "text-white" : "text-black"
+              }`}
+            >
+              From:
+            </label>
             <input
               type="text"
               className={`flex-1 p-2 outline-none ${
@@ -87,7 +110,13 @@ const ReplyDialog = ({ isOpen, onClose, onSendReply, onSave }) => {
             />
           </div>
           <div className="flex items-center mb-4 border-b">
-            <label className="w-24 text-sm font-semibold ml-2">Subject:</label>
+            <label
+              className={`w-24 text-sm font-semibold ml-2  ${
+                isDarkMode ? "text-white" : "text-black"
+              }`}
+            >
+              Subject:
+            </label>
             <input
               type="text"
               className={`flex-1 p-2 outline-none ${
@@ -121,7 +150,9 @@ const ReplyDialog = ({ isOpen, onClose, onSendReply, onSave }) => {
             <IoMdArrowDropdown />
           </button>
           <div className="relative flex items-center gap-2">
-            <BsFillLightningChargeFill />
+            <BsFillLightningChargeFill
+              className={`  ${isDarkMode ? "text-white" : "text-black"}`}
+            />
             <p
               className={`cursor-pointer ${
                 isDarkMode ? "text-white" : "text-black"

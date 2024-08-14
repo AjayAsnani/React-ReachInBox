@@ -156,7 +156,11 @@ const EmailDetails = ({ selectedEmail }) => {
                 }`}
               >
                 <img src="/Frame 23.png" className="h-5" />
-                <p className="text-sm">
+                <p
+                  className={`text-sm ${
+                    isDarkMode ? "text-white" : "text-black"
+                  }`}
+                >
                   Sent <span> 3rd, Feb</span>
                 </p>
               </div>
@@ -175,7 +179,11 @@ const EmailDetails = ({ selectedEmail }) => {
                 }`}
               >
                 <img src="/drafts.png" className="h-4" />
-                <p className="text-sm">
+                <p
+                  className={`text-sm ${
+                    isDarkMode ? "text-white" : "text-black"
+                  }`}
+                >
                   Opened <span> 5th, Feb</span>
                 </p>
               </div>
@@ -194,7 +202,11 @@ const EmailDetails = ({ selectedEmail }) => {
                 }`}
               >
                 <img src="/drafts.png" className="h-4" />
-                <p className="text-sm">
+                <p
+                  className={`text-sm ${
+                    isDarkMode ? "text-white" : "text-black"
+                  }`}
+                >
                   Opened <span> 5th, Feb</span>
                 </p>
               </div>
