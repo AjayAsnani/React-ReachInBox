@@ -3,7 +3,7 @@ import React from "react";
 const Login = () => {
   const handleGoogleLogin = () => {
     window.location.href =
-      "https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://localhost:5173/google-login";
+      "https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=https://reach-in-box-mu.vercel.app/google-login";
   };
 
   return (
