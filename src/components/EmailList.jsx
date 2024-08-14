@@ -10,6 +10,7 @@ const EmailList = ({ onSelectEmail }) => {
   useEffect(() => {
     const fetchEmails = async () => {
       const token = localStorage.getItem("token");
+      console.log("Retrieved Token:", token); // Debugging line
 
       if (!token) {
         console.error("No token found. Please log in.");
@@ -18,6 +19,13 @@ const EmailList = ({ onSelectEmail }) => {
       }
 
       try {
+        await axios.get("https://hiring.reachinbox.xyz/api/v1/onebox/reset", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        });
+
         const response = await axios.get(
           "https://hiring.reachinbox.xyz/api/v1/onebox/list",
           {

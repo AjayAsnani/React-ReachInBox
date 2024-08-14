@@ -2,6 +2,7 @@ import React from "react";
 
 const Login = () => {
   const handleGoogleLogin = () => {
+    localStorage.removeItem("token");
     window.location.href =
       "https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=https://venerable-frangipane-33372d.netlify.app/google-login";
   };
